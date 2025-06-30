@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eliminar Grado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Eliminar Grado</h1>
+    <button onclick="window.location.href='admin.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <form id="formEliminarGrado" class="form-container">
+    <label for="selectGradoEliminar">Seleccione un grado para eliminar:</label>
+    <select id="selectGradoEliminar">
+      <option value="" disabled selected>Selecciona un grado</option>
+    </select>
+    <button type="submit" class="btn btn-danger">Eliminar Grado</button>
+    <p id="mensajeEliminarGrado"></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

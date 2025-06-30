@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crear Sesión</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Crear Sesión de Clase</h1>
+    <button onclick="window.location.href='profesor.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <main class="form-container">
+    <label for="gradoSelect">Seleccionar Grado:</label>
+    <select id="gradoSelect"></select>
+    <span id="cursoAsignado"></span>
+    <button onclick="iniciarSesion()">Buscar</button>
+
+    <div id="infoSesion" style="display:none;">
+      <p><strong>Fecha:</strong> <span id="fechaSesion"></span></p>
+      <p><strong>Hora de inicio:</strong> <span id="horaInicio"></span></p>
+      <form id="asistenciasForm"></form>
+      <button onclick="guardarAsistencias()">Guardar Asistencias</button>
+      <p id="horaFinContainer" style="display:none;">
+        <strong>Hora de término:</strong> <span id="horaFin"></span>
+      </p>
+      <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

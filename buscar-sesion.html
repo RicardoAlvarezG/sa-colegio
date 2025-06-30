@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buscar Sesión</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Buscar Sesión</h1>
+    <button onclick="window.location.href='profesor.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <main class="form-container">
+    <label for="gradoBuscar">Seleccionar Grado:</label>
+    <select id="gradoBuscar"></select>
+
+    <label for="fechaBuscar">Seleccionar Fecha:</label>
+    <input type="date" id="fechaBuscar" />
+
+    <button onclick="verSesion()">Ver</button>
+
+    <div id="detalleSesion" style="display:none; margin-top:20px;"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web del Colegio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <img src="\img\logo_colegio.png" alt="Logo Colegio">
+    <span class="titulo-logo">I.E Santa Teresita</span>
+</div>
+<!-- Botón toggle-->
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div> 
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
+    </ul>
+  </nav>
+  
+  </header>
+
+    <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a Nuestro Colegio</h1>
+      <p>Formando el futuro con educación y valores</p>
+      <a href="contacto.html" class="btn-contacto">Contáctanos</a>
+    </div>
+  </section>
+    <section class="niveles">
+    <h2>Niveles Educativos de nuestra Institución</h2>
+    <div class="niveles-contenedor">
+      <div class="nivel">
+        <img src="img/eduinicial.jpg" alt="Nivel Inicial" class="img-cambio" data-alt="img/eduinicial2.jpg">
+        <p>Inicial</p>
+      </div>
+      <div class="nivel">
+        <img src="img/eduprimaria.jpg" alt="Nivel Primaria" class="img-cambio" data-alt="img/eduprimaria2.jpg">
+        <p>Primaria</p>
+      </div>
+      <div class="nivel">
+        <img src="img/edusecundaria.jpg" alt="Nivel Secundaria" class="img-cambio" data-alt="img/edusecundaria2.jpg">
+        <p>Secundaria</p>
+      </div>
+    </div>
+  </section>
+  <section class="talleres">
+    <h2>Descubre nuestros talleres educativos</h2>
+    <div class="talleres-contenedor">
+      <div class="taller">
+        <img src="img/tdanza.jpg" alt="Taller de Danza" class="img-cambio" data-alt="img/tdanza2.jpg">
+        <h3>Taller de Danza</h3>
+        <p>Desarrollamos la expresión corporal, ritmo y coordinación a través de diversas manifestaciones artísticas y culturales.</p>
+      </div>
+      <div class="taller">
+        <img src="img/tmusica.jpg" alt="Taller de Música" class="img-cambio" data-alt="img/tmusica2.jpg">
+        <h3>Taller de Música</h3>
+        <p>Fomentamos el talento musical de los estudiantes con instrumentos, canto y teoría musical.</p>
+      </div>
+    </div>
+  </section>
+<footer class="footer">
+    <div class="footer-logo">
+      <img src="img/logo_colegio.png" alt="Logo del Colegio">
+    </div>
+    <div class="footer-redes">
+      <a href="https://www.facebook.com/santa.teresitatrujillo" target="_blank">
+        <img src="/img/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="/img/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@santateresita_2012" target="_blank">
+        <img src="/img/tik-tok.png" alt="YouTube">
+      </a>
+    </div>
+    <p>&copy; 2025 Colegio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

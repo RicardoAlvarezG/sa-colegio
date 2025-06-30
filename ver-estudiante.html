@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estudiantes Asignados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Estudiantes Asignados</h1>
+    <button onclick="window.location.href='profesor.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <main class="form-container">
+    <section class="form-box">
+      <h2>Buscar por Grado</h2>
+      <div class="input-group">
+        <label for="selectGrado">Grado:</label>
+        <select id="selectGrado"></select>
+      </div>
+      <button onclick="buscarEstudiantes()">Buscar</button>
+    </section>
+
+    <section class="form-box">
+      <h2>Estudiantes del Grado</h2>
+      <ul id="listaEstudiantes" class="lista-usuarios"></ul>
+    </section>
+  </main>
+
+  <script src="ver-estudiantes.js"></script>
+</body>
+</html>

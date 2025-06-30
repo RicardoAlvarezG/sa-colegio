@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Estudiante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Registrar Estudiante</h1>
+    <button onclick="window.location.href='admin.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <form id="formRegistrarEstudiante">
+    <label for="apellidoPaterno">Apellido Paterno:</label>
+    <input type="text" id="apellidoPaterno" required>
+
+    <label for="apellidoMaterno">Apellido Materno:</label>
+    <input type="text" id="apellidoMaterno" required>
+
+    <label for="nombres">Nombres:</label>
+    <input type="text" id="nombres" required>
+
+    <label for="gradoEstudiante">Grado:</label>
+    <select id="gradoEstudiante" required></select>
+
+    <button type="submit">Registrar Estudiante</button>
+  </form>
+
+  <p id="mensajeRegistroEstudiante"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

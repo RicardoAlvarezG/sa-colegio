@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eliminar Curso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Eliminar Curso</h1>
+    <button onclick="window.location.href='admin.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <form id="formEliminarCurso" class="form-container">
+    <label for="selectCursoEliminar">Seleccione un curso para eliminar:</label>
+    <select id="selectCursoEliminar">
+      <option value="" disabled selected>Selecciona un curso</option>
+    </select>
+    <button type="submit" class="btn btn-danger">Eliminar Curso</button>
+    <p id="mensajeEliminarCurso"></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

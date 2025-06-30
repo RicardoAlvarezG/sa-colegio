@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Administrador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Panel del Administrador</h1>
+    <button onclick="logout()" class="btn-logout">Cerrar sesión</button>
+  </header>
+
+  <main class="dashboard-admin">
+    <section class="card">
+      <h2>Gestión de Docentes</h2>
+      <button onclick="location.href='register-docente.html'">Registrar Docente</button>
+      <button onclick="location.href='editar-docente.html'">Editar Docente</button>
+      <button onclick="location.href='asignar-docente.html'">Asignar Curso/Grado</button>
+      <button onclick="location.href='buscar-docente.html'">Buscar Docente</button>
+    </section>
+
+    <section class="card">
+      <h2>Gestión de Estudiantes</h2>
+      <button onclick="location.href='registrar-estudiante.html'">Registrar Estudiante</button>
+      <button onclick="location.href='editar-estudiante.html'">Editar Estudiante</button>
+      <button onclick="location.href='eliminar-estudiante.html'">Eliminar Estudiante</button>
+    </section>
+
+    <section class="card">
+      <h2>Grados y Cursos</h2>
+      <button onclick="location.href='crear-curso.html'">Crear Curso</button>
+      <button onclick="location.href='eliminar-curso.html'">Eliminar Curso</button>
+      <button onclick="location.href='crear-grado.html'">Crear Grado</button>
+      <button onclick="location.href='eliminar-grado.html'">Eliminar Grado</button>
+    </section>
+
+    <section class="card">
+      <h2>Asistencias</h2>
+      <button onclick="location.href='asistencias-admin.html'">Ver Asistencias por Grado</button>
+    </section>
+  </main>
+
+  <script>
+    function logout() {
+      sessionStorage.removeItem('loggedUser');
+      window.location.href = 'index.html';
+    }
+
+    const loggedUser = JSON.parse(sessionStorage.getItem('loggedUser'));
+    if (!loggedUser || loggedUser.role !== 'administrador') {
+      alert('Acceso denegado');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

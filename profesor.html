@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel del Profesor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Panel del Profesor</h1>
+    <button onclick="logout()" class="btn-logout">Cerrar sesión</button>
+  </header>
+
+  <main class="dashboard-admin">
+    <section class="card">
+      <h2>Gestión de Clases</h2>
+      <button onclick="location.href='ver-estudiante.html'">Estudiantes</button>
+    </section>
+
+    <section class="card">
+      <h2>Gestión de Asistencias</h2>
+      <button onclick="location.href='crear-session.html'">Crear Sesión</button>
+      <button onclick="location.href='modificar-sesion.html'">Modificar Sesión</button>
+      <button onclick="location.href='buscar-sesion.html'">Buscar Sesión</button>
+    </section>
+
+    <section class="card">
+      <h2>Informes</h2>
+      <button onclick="location.href='ver-sesiones.html'">Ver Sesiones</button>
+    </section>
+  </main>
+
+  <script>
+    function logout() {
+      sessionStorage.removeItem('loggedUser');
+      window.location.href = 'index.html';
+    }
+
+    const loggedUser = JSON.parse(sessionStorage.getItem('loggedUser'));
+    if (!loggedUser || loggedUser.role !== 'profesor') {
+      alert('Acceso denegado');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - Plataforma Escolar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="login-section">
+    <div class="login-container">
+
+      <!-- Botón para regresar con ícono SVG -->
+      <div style="text-align: right; margin-bottom: 15px;">
+        <a href="index.html" class="btn-regresar" title="Volver">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#003366" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H3.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.498.498 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L3.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+          </svg>
+        </a>
+      </div>
+
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" required />
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">Entrar</button>
+      </form>
+      <!-- <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p> -->
+      <p id="error-message"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

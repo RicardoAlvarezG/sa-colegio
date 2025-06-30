@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Colegio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ======= ENCABEZADO ======= -->
+  <header>
+    <div class="logo">
+      <img src="img/logo_colegio.png" alt="Logo Colegio">
+      <span class="titulo-logo">I.E Santa Teresita</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== SECCIÓN CONTACTO ====== -->
+  <section id="contacto" class="contacto-section">
+    <div class="contacto-container">
+      <!-- Columna izquierda -->
+      <div class="contacto-info">
+        <h2>Contáctanos</h2>
+        <p>Estamos aquí para ayudarte. Puedes comunicarte con nosotros a través de los siguientes medios:</p>
+
+        <!-- Formulario de contacto -->
+        <div class="formulario-container">
+          <form class="formulario-contacto" id="formulario-contacto">
+            <div class="campo">
+              <label for="nombre">Nombre y Apellido:</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="campo">
+              <label for="motivo">Motivo de Consulta:</label>
+              <textarea id="motivo" name="motivo" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Enviar Consulta</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="contacto-detalles">
+        <div class="detalle">
+          <img src="img/gmail.png" alt="Correo" class="icono">
+          <div>
+            <strong>Correo:</strong>
+            <p>santateresita_2012@hotmail.com</p>
+          </div>
+        </div>
+
+        <div class="detalle">
+          <img src="img/phone-call.png" alt="Teléfono" class="icono">
+          <div>
+            <strong>Teléfono:</strong>
+            <p>957 982 374</p>
+          </div>
+        </div>
+
+        <div class="detalle">
+          <img src="img/map.png" alt="Oficina" class="icono">
+          <div>
+            <strong>Oficina:</strong>
+            <p>Pasaje Casanova 205 MAMPUESTO, Trujillo, Perú</p>
+          </div>
+        </div>
+
+        <!-- Imagen de mapa -->
+        <div class="contacto-imagen">
+          <img src="img/UBICACOLE.png" alt="Ubicación del colegio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PIE DE PÁGINA ======= -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="img/logo_colegio.png" alt="Logo del Colegio">
+    </div>
+    <div class="footer-redes">
+      <a href="https://www.facebook.com/santa.teresitatrujillo" target="_blank">
+        <img src="img/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="img/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@santateresita_2012" target="_blank">
+        <img src="img/tik-tok.png" alt="TikTok">
+      </a>
+    </div>
+    <p>&copy; 2025 Colegio. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script para menú responsive -->
+  <script src="script.js"></script>
+
+  <!-- Script EmailJS (reemplaza los valores) -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("TU_PUBLIC_KEY"); // ← Reemplaza con tu Public Key
+    })();
+
+    document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const params = {
+        nombre: document.getElementById("nombre").value,
+        motivo: document.getElementById("motivo").value
+      };
+
+      emailjs.send("TU_SERVICE_ID", "TU_TEMPLATE_ID", params) // ← Reemplaza con tus datos
+        .then(function(response) {
+          alert("¡Consulta enviada correctamente!");
+          document.getElementById("formulario-contacto").reset();
+        }, function(error) {
+          alert("Ocurrió un error. Intenta de nuevo.");
+        });
+    });
+  </script>
+</body>
+</html>

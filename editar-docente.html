@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editar Docente - Dashboard Administrador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Editar Docente</h1>
+    <button onclick="window.location.href='admin.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <main class="container">
+    <section class="editar-docente-section">
+      <h2>Lista de Docentes</h2>
+      <select id="docenteSelect">
+        <option value="" disabled selected>Seleccione un docente</option>
+      </select>
+
+      <form id="editarDocenteForm" style="display:none; margin-top: 20px;">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" required />
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" min="18" max="100" required />
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">Guardar Cambios</button>
+      </form>
+
+      <p id="mensaje" style="color: red; margin-top: 15px;"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

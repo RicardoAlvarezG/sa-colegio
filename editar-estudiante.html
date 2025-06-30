@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Estudiante</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Editar Estudiante</h1>
+    <button onclick="window.location.href='admin.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <form id="formSeleccionEstudiante">
+    <label for="gradoSeleccionado">Selecciona un grado:</label>
+    <select id="gradoSeleccionado" required></select>
+
+    <label for="estudianteSeleccionado">Selecciona un estudiante:</label>
+    <select id="estudianteSeleccionado" required></select>
+  </form>
+
+  <form id="formEditarEstudiante">
+    <label for="editarApellidoPaterno">Apellido paterno:</label>
+    <input type="text" id="editarApellidoPaterno" required />
+
+    <label for="editarApellidoMaterno">Apellido materno:</label>
+    <input type="text" id="editarApellidoMaterno" required />
+
+    <label for="editarNombres">Nombres:</label>
+    <input type="text" id="editarNombres" required />
+
+    <label for="editarGrado">Nuevo grado:</label>
+    <select id="editarGrado" required></select>
+
+    <button type="submit">Guardar Cambios</button>
+    <p id="mensajeEditarEstudiante"></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

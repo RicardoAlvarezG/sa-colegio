@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asignar Curso y Grado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Asignar Curso y Grado</h1>
+    <button onclick="window.location.href='admin.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <label for="selectDocente">Selecciona un docente:</label>
+  <select id="selectDocente"></select>
+
+  <label for="curso">Curso:</label>
+  <select id="curso"></select>
+
+  <label for="grado">Grado:</label>
+  <select id="grado"></select>
+
+  <button id="btnAsignarCursoGrado">Asignar</button>
+
+  <p id="mensajeAsignar"></p>
+
+  <!-- NUEVO: Lista de asignaciones -->
+  <h2>Asignaciones actuales del docente</h2>
+  <ul id="listaAsignaciones"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modificar Sesión</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <h1>Modificar Sesión</h1>
+    <button onclick="window.location.href='profesor.html'" class="btn-logout">Volver al Panel</button>
+  </header>
+
+  <main class="form-container">
+    <label for="gradoSelect">Seleccionar Grado:</label>
+    <select id="gradoSelect"></select>
+
+    <label for="fechaInput">Seleccionar Fecha:</label>
+    <input type="date" id="fechaInput" />
+
+    <button onclick="buscarSesion()">Buscar</button>
+
+    <div id="resultados" style="display:none;">
+      <h3>Asistencias registradas</h3>
+      <form id="modificarForm"></form>
+      <button onclick="modificarAsistencias()">Modificar</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
